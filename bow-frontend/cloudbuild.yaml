@@ -7,3 +7,6 @@ steps:
     args:
       - deploy
       - --only=hosting
+options:
+  substitutionOption: ALLOW_LOOSE
+  logging: CLOUD_LOGGING_ONLY
