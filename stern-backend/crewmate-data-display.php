@@ -1,11 +1,11 @@
 <?php
-$servername = "localhost:/cloudsql/hacknjit2023-strawhats:us-east4:oceanman";
+$socket = "/cloudsql/hacknjit2023-strawhats:us-east4:oceanman";
 $username = "root";
 $password = 'jkL`-"p])t}./Dk+';
 $database = "oceanman";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = mysqli_connect(null, $username, $password, $database, null, $socket);
 
 // Check connection
 if (!$conn) {
