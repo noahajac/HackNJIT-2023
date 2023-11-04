@@ -17,7 +17,9 @@ Makin' an app through react wit' a back end that provides data wit' wha' be avai
 Grub 'n other supplies
 * Crewmate Database:
 General crewmate information 'n vitals
+* Possible Additions (T' be worked on last):
+Crew information portal
 
 ## APIs Plundered (Apis Used)
 
-TODO: APIs
+Utilized: Google Cloud
