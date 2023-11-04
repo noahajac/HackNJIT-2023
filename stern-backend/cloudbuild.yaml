@@ -20,7 +20,7 @@ steps:
       - run
       - services
       - update
-      - $_SERVICE_NAME
+      - stern-backend
       - '--platform=managed'
       - >-
         --image=us-east4-docker.pkg.dev/hacknjit2023-strawhats/cloud-run-source-deploy/hacknjit-2023/stern-backend:${COMMIT_SHA}
