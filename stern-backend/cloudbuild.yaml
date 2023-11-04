@@ -31,9 +31,7 @@ steps:
     id: Deploy
     entrypoint: gcloud
 images:
-  - >-
-    ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend:${COMMIT_SHA}
-  - >-
-    ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend/cache:${COMMIT_SHA}
+  - us-east4-docker.pkg.dev/hacknjit2023-strawhats/cloud-run-source-deploy/hacknjit-2023/stern-backend:${COMMIT_SHA}
+  - us-east4-docker.pkg.dev/hacknjit2023-strawhats/cloud-run-source-deploy/hacknjit-2023/stern-backend/cache:${COMMIT_SHA}
 options:
   logging: CLOUD_LOGGING_ONLY
