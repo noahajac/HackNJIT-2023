@@ -13,11 +13,12 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
-$sql = "Select `CrewmateID`, `FirstName`, `LastName`, `DOB` FROM `oceanman`";
+$sql = "SELECT `CrewmateID`, `FirstName`, `LastName`, `DOB` FROM `oceanman`";
 $result = mysqli_query($conn, $sql);
 if (!$result) {
   die("". mysqli_error($conn));
 }
 
+echo "$result";
 
 ?>
