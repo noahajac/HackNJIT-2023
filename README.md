@@ -1,13 +1,13 @@
-# HackNJIT 2023
+# HackNJIT 2023: ⛵ The Great Nautica ⛵
 
-## Crew: The Strawhats
+## Crewmates: The Strawhats
 
 * Allan Rozario - Back End
 * Conor Fitzpatrick - Front End
 * Daniel Paglia - Front End
 * Noah Jacobson - Back End
 
-## Project: (Name In Progress)
+## Project: OceanMan (To Be Changed)
 
 ### Project Focus:
 #### Makin' an app through react wit' a back end that provides data wit' wha' be available on the ship fer the crew. This includes; Grub, Ship Information, 'n Crew Vitality information.
@@ -23,10 +23,8 @@ Crew information portal
 ## APIs Plundered (Apis Used)
 * Google Cloud
 * GitHub
-
 ### Libraries Plundered (Libraries Used)
 * https://github.com/nikic/FastRoute
-
 ### Packages Plundered (Packages Used)
 * styled-components
  
