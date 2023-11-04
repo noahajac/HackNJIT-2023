@@ -1,6 +1,6 @@
 # HackNJIT 2023
 
-## Team: The Strawhats
+## Crew: The Strawhats
 
 * Allan Rozario
 * Conor Fitzpatrick
@@ -11,6 +11,6 @@
 
 TODO: Project
 
-## APIs Used
+## APIs Plundered (Apis Used)
 
 TODO: APIs
