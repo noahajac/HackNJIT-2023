@@ -14,11 +14,12 @@
 
 ### Project Information:
 * Material Database:
-#### Grub 'n other supplies
+Grub 'n other supplies
 * Crewmate Database:
-#### Blood Pressure, Height, Weight, Pysician, Time of Measure
+Blood Pressure, Height, Weight, Pysician, Time of Measure
 * Possible Additions (T' be worked on last):
-#### Crew information portal
+Crew information portal
 
 ## APIs Plundered (Apis Used)
-#### Utilized: Google Cloud
+* Utilized: 
+Google Cloud
