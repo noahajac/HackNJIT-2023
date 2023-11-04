@@ -13,12 +13,34 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
-$sql = "SELECT `CrewmateID`, `FirstName`, `LastName`, `DOB` FROM `oceanman`";
+$sql = "SELECT `CrewmateID`, `FirstName`, `LastName`, `DOB` FROM `Crewmate`";
 $result = mysqli_query($conn, $sql);
 if (!$result) {
   die("". mysqli_error($conn));
 }
 
-echo "$result";
-
-?>
+if (mysqli_num_rows($result) > 0) {
+  while ($nextField = mysqli_fetch_field($result)) {
+      $messages .= "<th>";
+      $messages .= $nextField->name;
+      $messages .= "</th>";
+  }
+           
+  $messages .= "</tr>";
+           
+  while ($row = mysqli_fetch_assoc($result)) {
+      $messages .="<tr>";
+      foreach ($row as $value) {
+          $messages .= "<td>";
+          $messages .= $value;
+          $messages .= "</td>";
+      }
+      $messages .= "</tr>";
+  }
+           
+  $messages .= "</table>";
+  
+  echo $messages;
+  }
+  
+  mysqli_close($conn);
