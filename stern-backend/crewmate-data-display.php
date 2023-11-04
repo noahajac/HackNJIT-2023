@@ -1,5 +1,5 @@
 <?php
-$servername = "/cloudsql/hacknjit2023-strawhats:us-east4:oceanman";
+$servername = "localhost:/cloudsql/hacknjit2023-strawhats:us-east4:oceanman";
 $username = "root";
 $password = 'jkL`-"p])t}./Dk+';
 $database = "oceanman";
@@ -12,6 +12,12 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
+
+$sql = "Select `CrewmateID`, `FirstName`, `LastName`, `DOB` FROM `oceanman`";
+$result = mysqli_query($conn, $sql);
+if (!$result) {
+  die("". mysqli_error($conn));
+}
 
 
 ?>
