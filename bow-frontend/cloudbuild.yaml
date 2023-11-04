@@ -6,7 +6,7 @@ steps:
     dir: 'bow-frontend/my-app'
     args: ['run', 'build']
   - name: 'gcr.io/$PROJECT_ID/firebase'
-    dir: 'bow-frontend/my-app'
+    dir: 'bow-frontend/my-app/build'
     args:
       - deploy
       - --only=hosting
