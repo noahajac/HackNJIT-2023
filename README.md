@@ -2,24 +2,23 @@
 
 ## Crew: The Strawhats
 
-* Allan Rozario
-* Conor Fitzpatrick
-* Daniel Paglia
-* Noah Jacobson
+* Allan Rozario - Back End
+* Conor Fitzpatrick - Front End
+* Daniel Paglia - Front End
+* Noah Jacobson - Back End
 
 ## Project: (Name In Progress)
 
 ### Project Focus:
-Makin' an app through react wit' a back end that provides data wit' wha' be available on the ship fer the crew. This includes; Grub, Ship Information, 'n Crew Vitality information.
+#### Makin' an app through react wit' a back end that provides data wit' wha' be available on the ship fer the crew. This includes; Grub, Ship Information, 'n Crew Vitality information.
 
 ### Project Information:
 * Material Database:
-Grub 'n other supplies
+#### Grub 'n other supplies
 * Crewmate Database:
-General crewmate information 'n vitals
+#### Blood Pressure, Height, Weight, Pysician, Time of Measure
 * Possible Additions (T' be worked on last):
-Crew information portal
+#### Crew information portal
 
 ## APIs Plundered (Apis Used)
-
-Utilized: Google Cloud
+#### Utilized: Google Cloud
