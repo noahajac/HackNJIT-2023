@@ -31,7 +31,9 @@ steps:
     id: Deploy
     entrypoint: gcloud
 images:
-  - ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend:${COMMIT_SHA}
-  - ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend/cache:${COMMIT_SHA}
+  - >-
+    ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend:${COMMIT_SHA}
+  - >-
+    ${LOCATION}-docker.pkg.dev/${PROJECT_ID}/cloud-run-source-deploy/${REPO_NAME}/stern-backend/cache:${COMMIT_SHA}
 options:
   logging: CLOUD_LOGGING_ONLY
