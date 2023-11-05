@@ -8,8 +8,8 @@
     justify-content: space-between;
 }
 
-.logo-container {
-    margin-left: 80px;
+main {
+    padding: 10px;
 }
 
 .logo-container span {
@@ -17,19 +17,11 @@
     cursor: pointer;
 }
 
-.links-container {
-    margin-right: 20px;
-    display: flex;
-    width: 300px;
-    justify-content: space-evenly;
+.link {
+    padding: 10px;
+    color: rgb(232, 238, 232);
 }
 
-.link a {
-    text-decoration: none;
-    color: rgb(14, 34, 14);
-}
-
-.link a:hover {
-    text-decoration: none;
-    color: rgba(14, 34, 14, 0.8);
+.link:hover {
+    color: rgba(97, 101, 97, 0.8);
 }
