@@ -1,54 +1,53 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const Table = styled.table`
   border: 7 px solid #ccc;
 `;
 
-
-
 interface PersonInfo {
-  name: string;
-  age: number;
-  weight: number;
-  height: number;
+  CrewmateID: number;
+  FirstName: string;
+  LastName: string;
+  DOB: string;
 }
 
-
 const Crewtable = () => {
+  const [data, setData] = useState<PersonInfo[] | null>(null);
 
-  const people: PersonInfo[] = [
-    { name: 'John Doe', age: 30, weight: 70, height: 175 },
-    { name: 'Jane Smith', age: 25, weight: 60, height: 160 },
-  ];
+  useEffect(() => {
+    fetch("https://api.cr3wm8te.biz/crewmates")
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error(error));
+  }, []);
 
+  let renderedPeople;
 
-
-
-  const renderedPeople = people.map((person, index) => (
-  
+  if (data === null) {
+    renderedPeople = (<tr><td></td></tr>);
+  } else {
+    renderedPeople = data.map((person: PersonInfo) => (
       <tr>
-      <td>{person.name}</td>
-      <td>{person.age}</td>
-      <td>{person.weight}</td>
-      <td>{person.height} cm</td>
+        <td>{person.FirstName}</td>
+        <td>{person.LastName}</td>
+        <td>{person.DOB}</td>
       </tr>
-
-  ));
+    ));
+  }
 
   return (
     <>
-    <Table>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>weight</th>
-      <th>height</th>
-    </tr>
-  {renderedPeople}
-  </Table>
-  </>
+      <Table>
+        <tr>
+          <th>First</th>
+          <th>Last</th>
+          <th>DOB</th>
+        </tr>
+        {renderedPeople}
+      </Table>
+    </>
   );
-}
+};
 
 export default Crewtable;
