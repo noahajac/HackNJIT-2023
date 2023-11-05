@@ -26,7 +26,7 @@ RUN set -ex; \
 WORKDIR /var/www/html
 COPY . ./
 
-RUN apt-get install -y libzip-dev zip \
+RUN apt update && apt install -y libzip-dev zip \
   && docker-php-ext-install zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
