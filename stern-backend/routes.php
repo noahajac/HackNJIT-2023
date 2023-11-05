@@ -22,3 +22,5 @@ get('/crewmate/$id/vitals', 'views/get_vitals');
 put('/crewmate/$id', 'views/update_crewmate');
 
 delete('/crewmate/$id', 'views/delete_crewmate');
+
+delete('/crewmate/$id/vital', 'views/delete_vital');
