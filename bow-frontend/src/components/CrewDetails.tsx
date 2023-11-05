@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";
 import { PersonInfo } from "./Crewtable";
+import AddVitalForm from "./AddVitalForm";
 
 const Table = styled.table`
   border: 7 px solid #ccc;
@@ -104,6 +105,8 @@ const CrewDetails = () => {
         </tr>
         {renderedVitals}
       </Table>
+
+      <AddVitalForm id={id} />
     </>
   );
 };
