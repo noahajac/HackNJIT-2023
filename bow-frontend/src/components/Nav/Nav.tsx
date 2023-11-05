@@ -22,9 +22,6 @@ const Nav: React.FC<{}> = () => {
           <Link className={styles.link} to="/crew">
             Crew Members
           </Link>
-          <Link className={styles.link} to="/crewdetails">
-            Crew Details
-          </Link>
         </div>
       </nav>
       <main>
