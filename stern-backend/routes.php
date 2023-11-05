@@ -17,3 +17,5 @@ get('/crewmate/$id/vitals', 'views/get_vitals');
 put('/crewmate/$id', 'views/update_crewmate');
 
 delete('/crewmate/$id', 'views/delete_crewmate');
+
+post('/crewmate/$id/vital', 'views/add_vital');
