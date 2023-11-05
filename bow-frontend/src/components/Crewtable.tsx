@@ -4,6 +4,8 @@ import Nav from "./Nav/Nav";
 import { Link } from "react-router-dom";
 const Table = styled.table`
   border: 7 px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export interface PersonInfo {

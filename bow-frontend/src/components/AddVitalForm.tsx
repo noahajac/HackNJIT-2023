@@ -36,7 +36,7 @@ const AddVitalForm = (props: Props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>Reporting Physician:</label>
+      <label>Reporting Physician: </label>
       <input
         value={inputs.addingPhysician || ""}
         name="addingPhysician"
