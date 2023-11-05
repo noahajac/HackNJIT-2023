@@ -26,12 +26,6 @@ RUN set -ex; \
 WORKDIR /var/www/html
 COPY . ./
 
-RUN apt update && apt install -y libzip-dev zip \
-  && docker-php-ext-install zip
-
-COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
-RUN composer install
-
 # Use the PORT environment variable in Apache configuration files.
 # https://cloud.google.com/run/docs/reference/container-contract#port
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
