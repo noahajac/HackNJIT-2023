@@ -12,7 +12,7 @@ Grub 'n other supplies
 * Crewmate Database:
 Blood Pressure, Height, Weight, Pysician, Time of Measure
 * Possible Additions (T' be worked on last):
-Crew information portal
+Crew information portal, 404 Page
 ## ***The Ship Crew***
 
 * [Allan Rozario](https://github.com/AllanRoz) - Back End
