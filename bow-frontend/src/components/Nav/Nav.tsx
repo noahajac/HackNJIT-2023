@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './Nav.module.css';
-
-import logo from './ourlogo.png';
-
+import logo from './ourlogo (2).png';
 
 type Link = {
     label: string;
@@ -29,7 +27,7 @@ const Nav: React.FC<{}> = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles['logo-container']}>
-                <span> <img src={logo} alt="ourlogo.png" width={35} height={35}/> </span>
+                <span> <img src={logo} alt="ourlogo.png" width={75} height={75}/> </span>
             </div>
 
         </nav>
