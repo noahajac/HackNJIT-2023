@@ -3,6 +3,7 @@
   import Nav from './components/Nav/Nav';
  
 import Crewtable from './components/Crewtable';
+import CrewDetails from './components/CrewDetails';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 
@@ -15,6 +16,7 @@ import Home from './components/Home/Home';
         <Route path="/" element={<Nav />}>
           <Route index element={<Home />} />
           <Route path="crew" element={ <Crewtable/> } />
+          <Route path="crewdetails" element={ <CrewDetails/> } />
         </Route>
       </Routes>
       </BrowserRouter>

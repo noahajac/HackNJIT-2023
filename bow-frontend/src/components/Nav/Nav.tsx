@@ -20,7 +20,10 @@ const Nav: React.FC<{}> = () => {
             Home
           </Link>
           <Link className={styles.link} to="/crew">
-            Crewmembers
+            Crew Members
+          </Link>
+          <Link className={styles.link} to="/crewdetails">
+            Crew Details
           </Link>
         </div>
       </nav>
