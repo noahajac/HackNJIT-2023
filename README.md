@@ -1,6 +1,6 @@
 # HackNJIT 2023: ⛵ The Great Nautica ⛵
 
-## **Project:** *OceanMan* (To Be Changed)
+## **Project:** *Cr3wm8te*
 #### *Please keep in mind throughout our project we shall be usin' pirate speak*
 ### *Project Focus:*
 #### Makin' an app through react wit' a back end that provides data wit' wha' be available on the ship fer the crew. This includes; Grub, Ship Information, 'n Crew Vitality information.
@@ -33,5 +33,5 @@
 * [Styled Components](https://styled-components.com)
 ## ***Other Plundered Sources*** (Sources Used)
 * [AI Image Generation](https://neural.love/ai-art-generator)
-* [One Piece Logo](https://1000logos.net/one-piece-logo/)
+* [Bing AI Image Generation](https://www.bing.com/create)
 * [w3schools](https://www.w3schools.com)

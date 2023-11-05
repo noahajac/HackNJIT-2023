@@ -7,6 +7,10 @@ const Table = styled.table`
   border: 7 px solid #ccc;
 `;
 
+const AlignedHeader = styled.h2`
+    text-align: center;
+`;
+
 interface VitalInfo {
   CrewmateID: number;
   Height: number;
@@ -73,9 +77,12 @@ const CrewDetails = () => {
       </tr>
     ));
   }
-
+  
   return (
     <>
+        <AlignedHeader>
+        Crew Member:
+        </AlignedHeader>
       <Table>
         <tr>
           <th>FirstName</th>
@@ -84,7 +91,9 @@ const CrewDetails = () => {
         </tr>
         {renderedInfo}
       </Table>
-
+        <AlignedHeader>
+        Vitals:
+        </AlignedHeader>
       <Table>
         <tr>
           <th>Time Measured</th>
