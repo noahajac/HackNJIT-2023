@@ -1,8 +1,8 @@
 <?php
-require 'vendor\autoload.php';
-require 'get_crewmates_handler.php';
-require 'get_crewmate_handler.php';
-require 'update_crewmate_handler.php';
+require_once('vendor/autoload.php');
+require_once('get_crewmates_handler.php');
+require_once('get_crewmate_handler.php');
+require_once('update_crewmate_handler.php');
 
 
 
