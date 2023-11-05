@@ -2,6 +2,8 @@
 
 require_once('database.php');
 
+echo $id;
+
 $sql = $db->prepare('SELECT * FROM Crewmate WHERE CrewmateID=:id;');
 $sql->bindValue(':id', $id);
 $sql->execute();
