@@ -7,6 +7,7 @@ require_once __DIR__.'/router.php';
 if (isset($_SERVER['HTTP_ORIGIN'])) {
   header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
   header('Access-Control-Max-Age: 86400');
+  header('Access-Control-Allow-Headers: *');
 }
 
 // ##################################################
