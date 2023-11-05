@@ -3,21 +3,22 @@
   import Nav from './components/Nav/Nav';
  
 import Crewtable from './components/Crewtable';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
 
   function App() {
 
     return (
-      <>
-        <Nav />
     <div className="App">
+      <BrowserRouter>
       <Routes>
-        <Route path="/crew" element={ <Crewtable/> } />
+        <Route path="/" element={<Nav />}>
+          <Route index element={<Home />} />
+          <Route path="crew" element={ <Crewtable/> } />
+        </Route>
       </Routes>
+      </BrowserRouter>
     </div>
-  
-
-    </>
     );
   }
 

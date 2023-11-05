@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Nav.module.css';
 import logo from './ourlogo (2).png';
+import { Outlet } from 'react-router-dom';
 
 type Link = {
     label: string;
@@ -24,13 +25,14 @@ const Links: React.FC<{ links: Link[] }> = ({ links }) => {
 };
 
 const Nav: React.FC<{}> = () => {
-    return (
+    return (<>
         <nav className={styles.navbar}>
             <div className={styles['logo-container']}>
                 <span> <img src={logo} alt="ourlogo.png" width={75} height={75}/> </span>
             </div>
 
         </nav>
+        <Outlet /></>
     )
 }
 
