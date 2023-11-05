@@ -16,7 +16,7 @@ import Home from './components/Home/Home';
         <Route path="/" element={<Nav />}>
           <Route index element={<Home />} />
           <Route path="crew" element={ <Crewtable/> } />
-          <Route path="crewdetails" element={ <CrewDetails/> } />
+          <Route path="crewmate/:id" element={ <CrewDetails/> } />
         </Route>
       </Routes>
       </BrowserRouter>

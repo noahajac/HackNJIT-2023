@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import styled from "styled-components";
+import { PersonInfo } from "./Crewtable";
 
 const Table = styled.table`
   border: 7 px solid #ccc;
@@ -7,38 +9,67 @@ const Table = styled.table`
 
 interface VitalInfo {
   CrewmateID: number;
-  FirstName: string;
-  LastName: string;
-  BP: string;
+  Height: number;
   Weight: number;
-  Physician: string;
-  TOM: string;
+  BloodPressure: number;
+  AddingPhysician: string;
+  TimeOfMeasure: string;
+  VitalID: number;
+}
 
+interface Props {
+  person: PersonInfo,
+  vitals: VitalInfo[]
 }
 
 const CrewDetails = () => {
-  const [data, setData] = useState<VitalInfo[] | null>(null);
+  const [data, setData] = useState<Props | null>(null);
+
+  let { id } = useParams();
 
   useEffect(() => {
-    fetch("https://api.cr3wm8te.biz/crewmates")
+    const crewmateFetch: Promise<PersonInfo[]> = fetch("https://api.cr3wm8te.biz/crewmate/" + id)
       .then((response) => response.json())
-      .then((json) => setData(json))
       .catch((error) => console.error(error));
-  }, []);
 
-  let renderedPeople;
+    const vitalsFetch: Promise<VitalInfo[]> = fetch("https://api.cr3wm8te.biz/crewmate/" + id + '/vitals')
+    .then((response) => response.json())
+    .catch((error) => console.error(error));
+
+    Promise.all([crewmateFetch, vitalsFetch]).then((res) => {
+      setData({
+        person: res[0][0],
+        vitals: res[1]
+      })
+    })
+  }, [id, setData]);
+
+  let renderedInfo;
 
   if (data === null) {
-    renderedPeople = (<tr><td></td></tr>);
+    renderedInfo = (<tr><td></td></tr>);
   } else {
-    renderedPeople = data.map((person: VitalInfo) => (
+    renderedInfo = (
       <tr>
-        <td>{person.FirstName}</td>
-        <td>{person.LastName}</td>
-        <td>{person.BP}</td>
-        <td>{person.Weight}</td>
-        <td>{person.Physician}</td>
-        <td>{person.TOM}</td>
+        <td>{data.person.FirstName}</td>
+        <td>{data.person.LastName}</td>
+        <td>{data.person.DOB}</td>
+      </tr>
+    );
+  }
+
+  let renderedVitals;
+
+  if (data === null) {
+    renderedVitals = (<tr><td></td></tr>);
+  } else {
+    renderedVitals = data.vitals.map((vital: VitalInfo) => (
+      <tr>
+        <td>{vital.TimeOfMeasure}</td>
+        <td>{vital.AddingPhysician}</td>
+        <td>{vital.Height}</td>
+        <td>{vital.Weight}</td>
+        <td>{vital.BloodPressure}</td>
       </tr>
     ));
   }
@@ -47,14 +78,22 @@ const CrewDetails = () => {
     <>
       <Table>
         <tr>
-          <th>First</th>
-          <th>Last</th>
-          <th>BP</th>
-          <th>Weight</th>
-          <th>Physician</th>
-          <th>Time of Measure</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>DOB</th>
         </tr>
-        {renderedPeople}
+        {renderedInfo}
+      </Table>
+
+      <Table>
+        <tr>
+          <th>Time Measured</th>
+          <th>Physician</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Blood Pressure</th>
+        </tr>
+        {renderedVitals}
       </Table>
     </>
   );

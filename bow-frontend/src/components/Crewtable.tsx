@@ -6,7 +6,7 @@ const Table = styled.table`
   border: 7 px solid #ccc;
 `;
 
-interface PersonInfo {
+export interface PersonInfo {
   CrewmateID: number;
   FirstName: string;
   LastName: string;
