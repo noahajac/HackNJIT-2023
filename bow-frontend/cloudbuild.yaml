@@ -1,14 +1,14 @@
 steps:
   - name: 'gcr.io/cloud-builders/npm'
-    dir: 'bow-frontend/my-app'
+    dir: 'bow-frontend'
     args: ['install']
     id: Setup
   - name: 'gcr.io/cloud-builders/npm'
-    dir: 'bow-frontend/my-app'
+    dir: 'bow-frontend'
     args: ['run', 'build']
     id: Build
   - name: 'gcr.io/$PROJECT_ID/firebase'
-    dir: 'bow-frontend/my-app/build'
+    dir: 'bow-frontend/build'
     id: Deploy
     args:
       - deploy
