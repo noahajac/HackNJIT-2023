@@ -1,26 +1,31 @@
 <?php
-function update_crewmate_handler($args)
-{
-    require 'database.php';
-    $put_vars = json_decode(file_get_contents("php://input"));
 
-    echo ($put_vars->first_name);
-    print_r($args);
+require_once('database.php');
 
-    $id = $args["id"];
+$body = json_decode(file_get_contents("php://input"));
 
-    $query = 'UPDATE Crewmate SET';
-    if ($put_vars->first_name != null) {
-        $query .= " FirstName = $put_vars->first_name,";
+foreach ($body as $key => $property) {
+    switch ($key) {
+        case 'FirstName':
+            $sql = $db->prepare('UPDATE Crewmate SET FirstName = :property WHERE CrewmateID = :id;');
+            $sql->bindValue(':property', $property);
+            $sql->bindValue(':id', $id);
+            $sql->execute();
+            $sql->closeCursor();
+            break;
+        case 'LastName':
+            $sql = $db->prepare('UPDATE Crewmate SET LastName = :property WHERE CrewmateID = :id;');
+            $sql->bindValue(':property', $property);
+            $sql->bindValue(':id', $id);
+            $sql->execute();
+            $sql->closeCursor();
+            break;
+        case 'DOB':
+            $sql = $db->prepare('UPDATE Crewmate SET DOB = :property WHERE CrewmateID = :id;');
+            $sql->bindValue(':property', $property);
+            $sql->bindValue(':id', $id);
+            $sql->execute();
+            $sql->closeCursor();
+            break;
     }
-
-    if ($put_vars->last_name != null) {
-        $query .= " LastName = $put_vars->last_name,";
-    }
-
-    if ($put_vars->dob != null) {
-        $query .= " DOB = $put_vars->dob,";
-    }
-
-    $query .=  " WHERE CrewmateID = $id;";
 }
