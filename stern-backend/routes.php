@@ -23,10 +23,6 @@ put('/crewmate/$id', 'views/update_crewmate');
 
 delete('/crewmate/$id', 'views/delete_crewmate');
 
-<<<<<<< HEAD
 delete('/crewmate/$id/vital', 'views/delete_vital');
 
 post('/crewmate/$id/vital', 'views/add_vital');
-=======
-post('/crewmate/$id/vital', 'views/add_vital');
->>>>>>> da172731453badab238d7c9ccfea8ec0824973fc
