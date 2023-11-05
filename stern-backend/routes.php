@@ -24,3 +24,5 @@ put('/crewmate/$id', 'views/update_crewmate');
 delete('/crewmate/$id', 'views/delete_crewmate');
 
 delete('/crewmate/$id/vital', 'views/delete_vital');
+
+post('/crewmate/$id/vital', 'views/add_vital');
