@@ -25,11 +25,12 @@ Crew information portal
 * [Google Cloud](https://cloud.google.com/?hl=en)
 * [GitHub](github.com)
 ## ***Libraries Plundered:*** (Libraries Used)
-* https://github.com/nikic/FastRoute
+* [PHP Router](https://phprouter.com)
 ## ***Packages Plundered:*** (Packages Used)
 * [Styled Components](https://styled-components.com)
 ## ***Other Plundered Sources*** (Sources Used)
 * [AI Image Generation](https://neural.love/ai-art-generator)
 * [One Piece Logo](https://1000logos.net/one-piece-logo/)
+* [w3schools](https://www.w3schools.com)
  
 ![The One Piece is Real!!!](https://1000logos.net/wp-content/uploads/2022/08/One-Piece-Logo.png)
