@@ -8,7 +8,11 @@ require_once __DIR__.'/router.php';
 // ##################################################
 // ##################################################
 
-get('/crewmate/$id', 'views/crewmate');
+get('/crewmates', 'views/get_crewmates');
+
+get('/crewmate/$id', 'views/get_crewmate');
+
+put('/crewmate/$id', 'views/update_crewmate');
 
 // Dynamic GET. Example with 2 variables
 // The $name will be available in full_name.php
