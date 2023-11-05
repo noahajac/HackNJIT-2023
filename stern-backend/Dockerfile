@@ -5,7 +5,7 @@ FROM php:8.0-apache
 
 # Configure PHP for Cloud Run.
 # Precompile PHP code with opcache.
-RUN docker-php-ext-install -j "$(nproc)" opcache
+RUN docker-php-ext-install -j "$(nproc)" opcache mysqli pdo pdo_mysql
 RUN a2enmod rewrite
 RUN set -ex; \
   { \
