@@ -12,6 +12,8 @@ get('/crewmates', 'views/get_crewmates');
 
 get('/crewmate/$id', 'views/get_crewmate');
 
+get('/crewmate/$id/vitals', 'views/get_vitals');
+
 put('/crewmate/$id', 'views/update_crewmate');
 
 // Dynamic GET. Example with 2 variables
