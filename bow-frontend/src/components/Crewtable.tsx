@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-
+import Nav from "./Nav/Nav";
+import { Link } from "react-router-dom";
 const Table = styled.table`
   border: 7 px solid #ccc;
 `;
@@ -29,8 +30,7 @@ const Crewtable = () => {
   } else {
     renderedPeople = data.map((person: PersonInfo) => (
       <tr>
-        <td>{person.FirstName}</td>
-        <td>{person.LastName}</td>
+        <td><Link to={'/crewmate/' +person.CrewmateID}>{person.FirstName + ' ' +person.LastName}</Link></td>
         <td>{person.DOB}</td>
       </tr>
     ));
@@ -40,8 +40,7 @@ const Crewtable = () => {
     <>
       <Table>
         <tr>
-          <th>First</th>
-          <th>Last</th>
+          <th>Name</th>
           <th>DOB</th>
         </tr>
         {renderedPeople}
