@@ -1,7 +1,7 @@
 <?php
-$socket = "/cloudsql/hacknjit2023-strawhats:us-east4:oceanman";
+$dsn = 'mysql:unix_socket=/cloudsql/hacknjit2023-strawhats:us-east4:oceanman;dbname=oceanman';
 $username = "root";
 $password = 'jkL`-"p])t}./Dk+';
 $database = "oceanman";
 
-$conn = mysqli_connect(null, $username, $password, $database, null, $socket);
+$db = new PDO($dsn, $username, $password);
