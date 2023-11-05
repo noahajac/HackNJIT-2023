@@ -1,7 +1,7 @@
 # HackNJIT 2023: ⛵ The Great Nautica ⛵
 
 ## **Project:** *OceanMan* (To Be Changed)
-
+#### *Please keep in mind throughout our project we shall be usin' pirate speak*
 ### *Project Focus:*
 #### Makin' an app through react wit' a back end that provides data wit' wha' be available on the ship fer the crew. This includes; Grub, Ship Information, 'n Crew Vitality information.
 
@@ -13,7 +13,7 @@ Grub 'n other supplies
 Blood Pressure, Height, Weight, Pysician, Time of Measure
 * Possible Additions (T' be worked on last):
 Crew information portal
-## **Crewmates:** *The Strawhats*
+## ***The Ship Crew***
 
 * [Allan Rozario](https://github.com/AllanRoz) - Back End
 * [Conor Fitzpatrick](https://github.com/CojoFitz) - Front End
@@ -24,7 +24,8 @@ Crew information portal
 ## ***APIs Plundered:*** (Apis Used)
 * [Google Cloud](https://cloud.google.com/?hl=en)
 * [GitHub](github.com)
-## ***Libraries Plundered:*** (Libraries Used)
+## ***Libraries Plundered:***
+###### (Libraries Used)
 * [PHP Router](https://phprouter.com)
 ## ***Packages Plundered:*** (Packages Used)
 * [Styled Components](https://styled-components.com)
