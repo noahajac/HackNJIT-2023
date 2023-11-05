@@ -5,11 +5,15 @@ import { PersonInfo } from "./Crewtable";
 import AddVitalForm from "./AddVitalForm";
 
 const Table = styled.table`
+  font-size: 20px;
   border: 7 px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
-const AlignedHeader = styled.h2`
-    text-align: center;
+const AlignedHeader = styled.h1`
+  font-size: 64px;
+  text-align: center;
 `;
 
 interface VitalInfo {
@@ -56,8 +60,8 @@ const CrewDetails = () => {
   } else {
     renderedInfo = (
       <tr>
-        <td>{data.person.FirstName}</td>
-        <td>{data.person.LastName}</td>
+        <td>{data.person.FirstName + ' ' +data.person.LastName}</td>
+        <td>|</td>
         <td>{data.person.DOB}</td>
       </tr>
     );
@@ -71,10 +75,15 @@ const CrewDetails = () => {
     renderedVitals = data.vitals.map((vital: VitalInfo) => (
       <tr>
         <td>{vital.TimeOfMeasure}</td>
+        <td>|</td>
         <td>{vital.AddingPhysician}</td>
+        <td>|</td>
         <td>{vital.Height}</td>
+        <td>|</td>
         <td>{vital.Weight}</td>
+        <td>|</td>
         <td>{vital.BloodPressure}</td>
+        <td></td>
       </tr>
     ));
   }
@@ -86,8 +95,8 @@ const CrewDetails = () => {
         </AlignedHeader>
       <Table>
         <tr>
-          <th>FirstName</th>
-          <th>LastName</th>
+          <th>Name</th>
+          <th>|</th>
           <th>DOB</th>
         </tr>
         {renderedInfo}
@@ -98,10 +107,15 @@ const CrewDetails = () => {
       <Table>
         <tr>
           <th>Time Measured</th>
+          <th>|</th>
           <th>Physician</th>
+          <th>|</th>
           <th>Height</th>
+          <th>|</th>
           <th>Weight</th>
+          <th>|</th>
           <th>Blood Pressure</th>
+          <th></th>
         </tr>
         {renderedVitals}
       </Table>
